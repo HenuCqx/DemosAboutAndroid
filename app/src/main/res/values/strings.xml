@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CSDN Demo</string>
+    <string name="is_group_title">IsTitle</string>
+    <string name="not_group_title">NotTitle</string>
+</resources>
