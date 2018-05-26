@@ -8,12 +8,11 @@ import android.widget.Button;
 
 import com.example.mrc.csdndemo.BackgroundTimeTask.TimeTask;
 import com.example.mrc.csdndemo.RecyclerViewCategory.RecyclerViewCategoryStyle;
-
-import java.text.BreakIterator;
+import com.example.mrc.csdndemo.SetAlarmAndTimerByGoogleVoiceAction.MainActivity;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
-    Button mBackgroundTimeTask,mRecyclerViewCategoryStyle;
+    Button mBackgroundTimeTask,mRecyclerViewCategoryStyle ,mSetAlarmAndTimerByGoogleVoiceAction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +24,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     void findView(){
         mBackgroundTimeTask = (Button) findViewById(R.id.background_time_task);
         mRecyclerViewCategoryStyle =(Button) findViewById(R.id.recyclerView_CategoryStyle);
+        mSetAlarmAndTimerByGoogleVoiceAction = (Button)findViewById(R.id.set_alarm_and_timer_by_google_voice_action);
         mBackgroundTimeTask.setOnClickListener(this);
         mRecyclerViewCategoryStyle.setOnClickListener(this);
+        mSetAlarmAndTimerByGoogleVoiceAction.setOnClickListener(this);
     }
 
     void Init(){
@@ -41,8 +42,13 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 startActivity(backgroundTimeTaskIntent);
                 break;
             case R.id.recyclerView_CategoryStyle :
-                Intent recyclerViewCategoryStyle =new Intent(this ,MainActivity.class);
+                Intent recyclerViewCategoryStyle =new Intent(this ,RecyclerViewCategoryStyle.class);
                 startActivity(recyclerViewCategoryStyle);
+                break;
+            case R.id.set_alarm_and_timer_by_google_voice_action :
+                Intent setAlarmAndTimerByGoogleVoiceAction = new Intent(Homepage.this ,MainActivity.class);
+                startActivity(setAlarmAndTimerByGoogleVoiceAction);
+                break;
             default:break;
         }
     }

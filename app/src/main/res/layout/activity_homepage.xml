@@ -30,6 +30,16 @@
             android:textSize="17sp"
             android:textColor="@color/text_white"
             android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/set_alarm_and_timer_by_google_voice_action"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:text="谷歌语音设置闹钟和计时器"
+            android:background="@drawable/button_style"
+            android:textSize="17sp"
+            android:textColor="@color/text_white"
+            android:layout_marginTop="16dp"/>
     </LinearLayout>
 
 </ScrollView>

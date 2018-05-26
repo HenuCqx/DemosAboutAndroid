@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mrc.csdndemo.MainActivity">
-
-</android.support.constraint.ConstraintLayout>
+    android:orientation="vertical"
+    tools:context="com.example.mrc.csdndemo.SetAlarmAndTimerByGoogleVoiceAction.MainActivity">
+    <Button
+        android:id="@+id/alarm"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:text="闹钟显示页面"
+        android:background="@drawable/button_style"
+        android:textSize="17sp"
+        android:textColor="@color/text_white"
+        android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/timer"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="240dp"
+        android:layout_height="48dp"
+        android:text="计时器显示页面"
+        android:background="@drawable/button_style"
+        android:textSize="17sp"
+        android:textColor="@color/text_white"
+        android:layout_marginTop="16dp"/>
+    <TextView
+        android:layout_marginTop="36dp"
+        android:layout_gravity="center"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="进入两个页面无内容，主要用来测试谷歌语音设置闹钟和计时器,需要带谷歌语音的设备才能使用。使用方式：在设备主界面呼出谷歌语音，对谷歌语音说设置几点的闹钟等，就会唤出此应用。"/>
+</LinearLayout>

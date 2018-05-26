@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class MainActivity extends Activity {
+public class SampleActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

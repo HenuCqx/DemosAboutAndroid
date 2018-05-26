@@ -43,8 +43,45 @@
             android:exported="true" />
 
         <activity android:name=".RecyclerViewCategory.RecyclerViewCategoryStyle" />
-        <activity android:name=".MainActivity"
-            android:theme="@android:style/Theme.NoDisplay"></activity>
+        <activity
+            android:name=".SampleActivity"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        //无界面Activity需要设置的属性
+        //启动模式设置为单一模式
+        //Activity主题设置为NoDisplay
+        <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.AlarmListActivity">
+            <intent-filter>
+                //语音设置闹钟之后，点击跳转到指定页面需要添加的action和category
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.SHOW_ALARMS" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.TimerListActivity">
+            <intent-filter>
+                //语音添加计时器之后自动跳转到指定页面需要添加的action和category
+                //似乎对计时器无效
+                <action android:name="android.intent.action.SHOW_TIMERS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.GoogleVoiceActionSetAlarmActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                //语音设置闹钟需要添加的action和category
+                <action android:name="android.intent.action.SET_ALARM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.GoogleVoiceActionSetTimerActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                //语音设置计时器需要添加的action和category
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.SET_TIMER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.MainActivity"></activity>
     </application>
 
 </manifest>
