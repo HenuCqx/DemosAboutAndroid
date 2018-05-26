@@ -7,14 +7,16 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mrc.csdndemo.BackgroundTimeTask.TimeTask;
+import com.example.mrc.csdndemo.PreferenceExample.PreferenceExampleActivity;
 import com.example.mrc.csdndemo.RecyclerViewCategory.RecyclerViewCategoryStyle;
 import com.example.mrc.csdndemo.SetAlarmAndTimerByGoogleVoiceAction.MainActivity;
+import com.example.mrc.csdndemo.TimerPickerExample.TimerPickerExampleActivity;
 import com.example.mrc.csdndemo.UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActionInTheAPPActivity;
 
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
     Button mBackgroundTimeTask,mRecyclerViewCategoryStyle ,mSetAlarmAndTimerByGoogleVoiceAction ,
-            mUseGoogleVoiceActionInTheAPP;
+            mUseGoogleVoiceActionInTheAPP ,mPreferenceExample ,mTimerPickerExample;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +26,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         Init();
     }
     void findView(){
+        mPreferenceExample = (Button)findViewById(R.id.preference_example);
+        mTimerPickerExample = (Button)findViewById(R.id.timePicker_example);
         mBackgroundTimeTask = (Button) findViewById(R.id.background_time_task);
         mRecyclerViewCategoryStyle =(Button) findViewById(R.id.recyclerView_CategoryStyle);
         mSetAlarmAndTimerByGoogleVoiceAction = (Button)findViewById(R.id.set_alarm_and_timer_by_google_voice_action);
         mUseGoogleVoiceActionInTheAPP = (Button)findViewById(R.id.use_google_voice_action_in_the_app);
+        mPreferenceExample.setOnClickListener(this);
+        mTimerPickerExample.setOnClickListener(this);
         mBackgroundTimeTask.setOnClickListener(this);
         mRecyclerViewCategoryStyle.setOnClickListener(this);
         mSetAlarmAndTimerByGoogleVoiceAction.setOnClickListener(this);
@@ -41,6 +47,14 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.preference_example :
+                Intent preferenceExampleIntent =new Intent(Homepage.this , PreferenceExampleActivity.class);
+                startActivity(preferenceExampleIntent);
+                break;
+            case R.id.timePicker_example :
+                Intent timerPickerExampleIntent =new Intent(Homepage.this , TimerPickerExampleActivity.class);
+                startActivity(timerPickerExampleIntent);
+                break;
             case R.id.background_time_task :
                 Intent backgroundTimeTaskIntent =new Intent(Homepage.this , TimeTask.class);
                 startActivity(backgroundTimeTaskIntent);

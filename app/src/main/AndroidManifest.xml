@@ -87,7 +87,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.MainActivity" />
-        <activity android:name=".UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActionInTheAPPActivity"></activity>
+        <activity android:name=".UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActionInTheAPPActivity" />
+        <activity android:name=".PreferenceExample.PreferenceExampleActivity" />
+        <activity android:name=".TimerPickerExample.TimerPickerExampleActivity"></activity>
     </application>
 
 </manifest>
