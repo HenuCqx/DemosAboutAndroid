@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mrc.csdndemo.BackgroundTimeTask.TimeTask;
+import com.example.mrc.csdndemo.DestroyAppointedActivity.A_Activity;
 import com.example.mrc.csdndemo.PreferenceExample.PreferenceExampleActivity;
 import com.example.mrc.csdndemo.RecyclerViewCategory.RecyclerViewCategoryStyle;
 import com.example.mrc.csdndemo.SetAlarmAndTimerByGoogleVoiceAction.MainActivity;
@@ -16,7 +17,7 @@ import com.example.mrc.csdndemo.UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActio
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
     Button mBackgroundTimeTask,mRecyclerViewCategoryStyle ,mSetAlarmAndTimerByGoogleVoiceAction ,
-            mUseGoogleVoiceActionInTheAPP ,mPreferenceExample ,mTimerPickerExample;
+            mUseGoogleVoiceActionInTheAPP ,mPreferenceExample ,mTimerPickerExample ,mDestroyAppointedActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +33,15 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         mRecyclerViewCategoryStyle =(Button) findViewById(R.id.recyclerView_CategoryStyle);
         mSetAlarmAndTimerByGoogleVoiceAction = (Button)findViewById(R.id.set_alarm_and_timer_by_google_voice_action);
         mUseGoogleVoiceActionInTheAPP = (Button)findViewById(R.id.use_google_voice_action_in_the_app);
+        mDestroyAppointedActivity = (Button)findViewById(R.id.destroy_appointed_activity);
+
         mPreferenceExample.setOnClickListener(this);
         mTimerPickerExample.setOnClickListener(this);
         mBackgroundTimeTask.setOnClickListener(this);
         mRecyclerViewCategoryStyle.setOnClickListener(this);
         mSetAlarmAndTimerByGoogleVoiceAction.setOnClickListener(this);
         mUseGoogleVoiceActionInTheAPP.setOnClickListener(this);
+        mDestroyAppointedActivity.setOnClickListener(this);
     }
 
     void Init(){
@@ -70,6 +74,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             case R.id.use_google_voice_action_in_the_app :
                 Intent useGoogleVoiceActionIntheAPPIntent = new Intent(Homepage.this , UseGoogleVoiceActionInTheAPPActivity.class);
                 startActivity(useGoogleVoiceActionIntheAPPIntent);
+                break;
+            case R.id.destroy_appointed_activity :
+                Intent destroyAppointedActivityIntent = new Intent(Homepage.this , A_Activity.class);
+                startActivity(destroyAppointedActivityIntent);
                 break;
             default:break;
         }

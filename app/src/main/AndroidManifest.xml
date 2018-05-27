@@ -89,7 +89,11 @@
         <activity android:name=".SetAlarmAndTimerByGoogleVoiceAction.MainActivity" />
         <activity android:name=".UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActionInTheAPPActivity" />
         <activity android:name=".PreferenceExample.PreferenceExampleActivity" />
-        <activity android:name=".TimerPickerExample.TimerPickerExampleActivity"></activity>
+        <activity android:name=".TimerPickerExample.TimerPickerExampleActivity" />
+        <activity android:name=".DestroyAppointedActivity.A_Activity"/>
+        <activity android:name=".DestroyAppointedActivity.B_Activity"
+            android:launchMode="singleTask">
+        </activity>
     </application>
 
 </manifest>
