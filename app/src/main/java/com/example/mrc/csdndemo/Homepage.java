@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.mrc.csdndemo.AndroidViewAbout.AndroidViewDemoActivity;
 import com.example.mrc.csdndemo.BackgroundTimeTask.TimeTask;
 import com.example.mrc.csdndemo.DestroyAppointedActivity.A_Activity;
 import com.example.mrc.csdndemo.PreferenceExample.PreferenceExampleActivity;
@@ -17,7 +18,8 @@ import com.example.mrc.csdndemo.UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActio
 public class Homepage extends AppCompatActivity implements View.OnClickListener {
 
     Button mBackgroundTimeTask,mRecyclerViewCategoryStyle ,mSetAlarmAndTimerByGoogleVoiceAction ,
-            mUseGoogleVoiceActionInTheAPP ,mPreferenceExample ,mTimerPickerExample ,mDestroyAppointedActivity;
+            mUseGoogleVoiceActionInTheAPP ,mPreferenceExample ,mTimerPickerExample ,mDestroyAppointedActivity ,
+            mAndroidView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         mSetAlarmAndTimerByGoogleVoiceAction = (Button)findViewById(R.id.set_alarm_and_timer_by_google_voice_action);
         mUseGoogleVoiceActionInTheAPP = (Button)findViewById(R.id.use_google_voice_action_in_the_app);
         mDestroyAppointedActivity = (Button)findViewById(R.id.destroy_appointed_activity);
+        mAndroidView = (Button)findViewById(R.id.android_view);
 
         mPreferenceExample.setOnClickListener(this);
         mTimerPickerExample.setOnClickListener(this);
@@ -42,6 +45,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         mSetAlarmAndTimerByGoogleVoiceAction.setOnClickListener(this);
         mUseGoogleVoiceActionInTheAPP.setOnClickListener(this);
         mDestroyAppointedActivity.setOnClickListener(this);
+        mAndroidView.setOnClickListener(this);
     }
 
     void Init(){
@@ -78,6 +82,10 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
             case R.id.destroy_appointed_activity :
                 Intent destroyAppointedActivityIntent = new Intent(Homepage.this , A_Activity.class);
                 startActivity(destroyAppointedActivityIntent);
+                break;
+            case R.id.android_view :
+                Intent androidViewIntent = new Intent(Homepage.this , AndroidViewDemoActivity.class);
+                startActivity(androidViewIntent);
                 break;
             default:break;
         }

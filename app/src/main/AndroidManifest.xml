@@ -90,10 +90,12 @@
         <activity android:name=".UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActionInTheAPPActivity" />
         <activity android:name=".PreferenceExample.PreferenceExampleActivity" />
         <activity android:name=".TimerPickerExample.TimerPickerExampleActivity" />
-        <activity android:name=".DestroyAppointedActivity.A_Activity"/>
-        <activity android:name=".DestroyAppointedActivity.B_Activity"
-            android:launchMode="singleTask">
-        </activity>
+        <activity android:name=".DestroyAppointedActivity.A_Activity" />
+        <activity
+            android:name=".DestroyAppointedActivity.B_Activity"
+            android:launchMode="singleTask" />
+        <activity android:name=".AndroidViewAbout.AndroidViewDemoActivity" />
+        <activity android:name=".AndroidViewAbout.ViewSlideSpeedActivity"></activity>
     </application>
 
 </manifest>

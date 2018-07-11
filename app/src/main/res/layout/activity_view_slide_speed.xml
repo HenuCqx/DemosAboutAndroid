@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context="com.example.mrc.csdndemo.AndroidViewAbout.ViewSlideSpeedActivity">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/button_style"/>
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxEms="15"
+        android:text="通过在上面的View中进行单击，长按，滑动，双击等操作，会显示相应的提示"/>
+</LinearLayout>
