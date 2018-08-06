@@ -95,7 +95,13 @@
             android:name=".DestroyAppointedActivity.B_Activity"
             android:launchMode="singleTask" />
         <activity android:name=".AndroidViewAbout.AndroidViewDemoActivity" />
-        <activity android:name=".AndroidViewAbout.ViewSlideSpeedActivity"></activity>
+        <activity android:name=".AndroidViewAbout.ViewSlideSpeedActivity" />
+        <activity android:name=".ServiceDemo.LaunchServiceActivity" />
+
+        <service
+            android:name=".ServiceDemo.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

@@ -1,8 +1,10 @@
 package com.example.mrc.csdndemo;
 
 import android.content.Intent;
+import android.sax.StartElementListener;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,6 +13,7 @@ import com.example.mrc.csdndemo.BackgroundTimeTask.TimeTask;
 import com.example.mrc.csdndemo.DestroyAppointedActivity.A_Activity;
 import com.example.mrc.csdndemo.PreferenceExample.PreferenceExampleActivity;
 import com.example.mrc.csdndemo.RecyclerViewCategory.RecyclerViewCategoryStyle;
+import com.example.mrc.csdndemo.ServiceDemo.LaunchServiceActivity;
 import com.example.mrc.csdndemo.SetAlarmAndTimerByGoogleVoiceAction.MainActivity;
 import com.example.mrc.csdndemo.TimerPickerExample.TimerPickerExampleActivity;
 import com.example.mrc.csdndemo.UseGoogleVoiceActionInTheAPP.UseGoogleVoiceActionInTheAPPActivity;
@@ -19,7 +22,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
 
     Button mBackgroundTimeTask,mRecyclerViewCategoryStyle ,mSetAlarmAndTimerByGoogleVoiceAction ,
             mUseGoogleVoiceActionInTheAPP ,mPreferenceExample ,mTimerPickerExample ,mDestroyAppointedActivity ,
-            mAndroidView;
+            mAndroidView ,mServiceExample;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,7 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
         mUseGoogleVoiceActionInTheAPP = (Button)findViewById(R.id.use_google_voice_action_in_the_app);
         mDestroyAppointedActivity = (Button)findViewById(R.id.destroy_appointed_activity);
         mAndroidView = (Button)findViewById(R.id.android_view);
+        mServiceExample = (Button)findViewById(R.id.android_service);
 
         mPreferenceExample.setOnClickListener(this);
         mTimerPickerExample.setOnClickListener(this);
@@ -87,6 +91,9 @@ public class Homepage extends AppCompatActivity implements View.OnClickListener 
                 Intent androidViewIntent = new Intent(Homepage.this , AndroidViewDemoActivity.class);
                 startActivity(androidViewIntent);
                 break;
+            case  R.id.android_service :
+                Intent serviceIntent = new Intent(Homepage.this , LaunchServiceActivity.class);
+                startActivity(serviceIntent);
             default:break;
         }
     }
