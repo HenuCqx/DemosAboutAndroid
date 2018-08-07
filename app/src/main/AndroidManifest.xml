@@ -101,7 +101,10 @@
         <service
             android:name=".ServiceDemo.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".TaskStackBuilder.TaskStackBuilderActivity" />
+        <activity android:name=".BroadcastReceiverExample.BroadcastReceiverActivity"></activity>
     </application>
 
 </manifest>
